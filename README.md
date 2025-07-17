@@ -20,16 +20,6 @@ A productivity and structure management tool for writers and screenwriters. Orga
 - Docker + Docker Compose
 - GitHub Actions (CI/CD)
 
-## 🔧 Local Setup
+---
 
-```bash
-# Backend
-cd backend
-docker-compose up --build
-
-# Frontend
-cd frontend
-npm install
-npm run dev
-
-## Currently in development.
+# Currently in development.

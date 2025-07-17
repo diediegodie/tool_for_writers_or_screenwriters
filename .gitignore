@@ -1,0 +1,107 @@
+########################################
+# Project Planning & Tasks
+########################################
+PLANNING.md
+TASK.md
+
+########################################
+# Python Virtual Environments & Secrets
+########################################
+venv/
+.env
+.env.*
+secrets.env
+*.secret
+*.key
+*.pem
+*.crt
+
+########################################
+# Python Bytecode & Caches
+########################################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+########################################
+# Logs & Local Databases
+########################################
+*.log
+*.sqlite3
+*.db
+*.sqlite
+*.db-journal
+*.sql
+*.dump
+local.db
+instance/
+migrations/versions/
+
+########################################
+# Docker & Containerization
+########################################
+docker-compose.override.yml
+docker-compose.*.yml
+docker.env
+.docker/
+volumes/
+*volume*/
+*.pid
+
+########################################
+# OS-Specific Files
+########################################
+.DS_Store
+Thumbs.db
+
+########################################
+# Editor & IDE Configs
+########################################
+.vscode/
+.idea/
+*.swp
+*.swo
+
+########################################
+# Build & Distribution
+########################################
+build/
+dist/
+*.egg-info/
+.eggs/
+
+########################################
+# Test & Coverage
+########################################
+.coverage
+htmlcov/
+.tox/
+.nox/
+.cache/
+.pytest_cache/
+
+########################################
+# Node.js (if frontend present)
+########################################
+node_modules/
+npm-debug.log
+yarn-error.log
+
+########################################
+# GitHub & CI/CD
+########################################
+.github/
+!.github/README.md
+!.github/instructions/
+
+########################################
+# Miscellaneous
+########################################
+*.bak
+*.tmp
+
+# Allow only configuration templates/examples
+!docker-compose.yml.example
+!backend/.env.example

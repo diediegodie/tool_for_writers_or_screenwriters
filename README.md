@@ -1,8 +1,8 @@
-# ✍️ Writer & Screenwriter Tool
+# Writer & Screenwriter Tool
 
 A productivity and structure management tool for writers and screenwriters. Organize your work into projects, chapters, and scenes. Write, annotate, save automatically, and export with ease.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 **Frontend**
 - React (Vite)

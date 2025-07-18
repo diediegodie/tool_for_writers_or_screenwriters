@@ -2,14 +2,68 @@
 
 A productivity and structure management tool for writers and screenwriters. Organize your work into projects, chapters, and scenes. Write, annotate, save automatically, and export with ease.
 
-- Slate.js or Quill.js
-- TailwindCSS
+## 🚀 Quick Start
+
+### Prerequisites
+- Python 3.8+
+- Node.js 16+
+- PostgreSQL (or use Docker Compose)
+
+### Environment Setup
+1. Copy the environment template:
+   ```bash
+   cp .env.example .env
+   ```
+2. Update the `.env` file with your configuration (database URL, secret keys, etc.)
+
+### Running with Docker Compose (Recommended)
+```bash
+# Start the full stack (backend + database)
+docker-compose up
+
+# Run tests
+npm run test:all
+# or
+./run_all_tests.sh
+```
+
+### Manual Setup
+1. **Backend Setup:**
+   ```bash
+   cd backend
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install -r requirements.txt
+   flask db upgrade
+   python run.py
+   ```
+
+2. **Frontend Setup:**
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+
+## 🛠️ Technology Stack
+
+**Backend:**
+- Python + Flask
 - PostgreSQL + SQLAlchemy
 - JWT Authentication
-**Infrastructure**
+
+**Frontend:**
+**Frontend:**
+- React + Vite
+- Slate.js (rich text editor)
+- TailwindCSS
+- Axios for API communication
+
+**Infrastructure:**
+- Docker & Docker Compose
 - GitHub Actions (CI/CD)
 
----
+## 📝 API Documentation
 # Backend testing uses pytest and pytest-flask. All models, routes, and export logic are covered by unit and integration tests. Tests run in an isolated SQLite database and can be executed from the project root with `pytest`. All tests passing as of July 18, 2025.
 
 ### GET /drafts/

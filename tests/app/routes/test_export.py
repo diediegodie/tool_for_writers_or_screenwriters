@@ -42,9 +42,14 @@ def test_post_export_docx(client, auth_header):
         db.session.commit()
     data = {"export_type": "docx"}
     rv = client.post("/export/proj-uuid", json=data, headers=auth_header)
-    assert rv.status_code == 201
-    assert rv.get_json()["export_type"] == "docx"
-    assert rv.get_json()["project_id"] == "proj-uuid"
+    assert rv.status_code == 200
+    # Reason: Check export metadata in DB
+    with client.application.app_context():
+        export = Export.query.filter_by(
+            project_id="proj-uuid", export_type="docx"
+        ).first()
+        assert export is not None
+        assert export.user_id == "user-uuid"
 
 
 def test_post_export_pdf(client, auth_header):
@@ -55,9 +60,14 @@ def test_post_export_pdf(client, auth_header):
         db.session.commit()
     data = {"export_type": "pdf"}
     rv = client.post("/export/proj-uuid2", json=data, headers=auth_header)
-    assert rv.status_code == 201
-    assert rv.get_json()["export_type"] == "pdf"
-    assert rv.get_json()["project_id"] == "proj-uuid2"
+    assert rv.status_code == 200
+    # Reason: Check export metadata in DB
+    with client.application.app_context():
+        export = Export.query.filter_by(
+            project_id="proj-uuid2", export_type="pdf"
+        ).first()
+        assert export is not None
+        assert export.user_id == "user-uuid"
 
 
 def test_post_export_invalid_type(client, auth_header):

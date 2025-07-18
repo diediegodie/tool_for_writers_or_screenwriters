@@ -60,3 +60,17 @@ def test_post_autosave_missing_ids(client, auth_header):
     rv = client.post("/autosave/", json=data, headers=auth_header)
     assert rv.status_code == 400
     assert "error" in rv.get_json()
+
+
+def test_post_autosave_deduplication(client, auth_header):
+    """Edge case: rapid identical autosave requests should not create duplicate snapshots."""
+    data = {"scene_id": "scene-uuid", "content": "Deduped content."}
+    # First autosave
+    rv1 = client.post("/autosave/", json=data, headers=auth_header)
+    assert rv1.status_code == 201
+    # Second autosave with same content within 30s
+    rv2 = client.post("/autosave/", json=data, headers=auth_header)
+    assert rv2.status_code == 200
+    # Should return same content and scene_id
+    assert rv2.get_json()["scene_id"] == "scene-uuid"
+    assert rv2.get_json()["content"] == "Deduped content."

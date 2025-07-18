@@ -64,14 +64,15 @@ A productivity and structure management tool for writers and screenwriters. Orga
 - Requires JWT authentication.
 - Returns the saved autosave version.
 - 400 if missing required fields.
+- **Server-side deduplication:** If an identical snapshot exists for the same scene/draft within the last 30 seconds, the server skips saving and returns the latest snapshot (200 OK).
 
 ## Export API
 
 ### POST /export/<project_id>
-- Exports a project to `.docx` or `.pdf` and saves export metadata.
+- Exports a project to `.docx` or `.pdf` using `python-docx` or `reportlab` and saves export metadata.
 - Requires JSON body: `{ "export_type": "docx" }` or `{ "export_type": "pdf" }`
 - Requires JWT authentication.
-- Returns export metadata.
+- Returns the generated file as a download and stores export metadata in the database.
 - 400 if invalid type, 404 if project not found.
 
 ## API Endpoint History

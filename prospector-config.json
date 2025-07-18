@@ -1,0 +1,831 @@
+{
+  "summary": {
+    "started": "2025-07-18 14:47:43.359570",
+    "libraries": [],
+    "strictness": null,
+    "profiles": "default, no_doc_warnings, no_test_warnings, strictness_medium, strictness_high, strictness_veryhigh, no_member_warnings",
+    "tools": [
+      "dodgy",
+      "mccabe",
+      "profile-validator",
+      "pycodestyle",
+      "pyflakes",
+      "pylint"
+    ],
+    "message_count": 53,
+    "completed": "2025-07-18 14:47:58.436940",
+    "time_taken": "15.08",
+    "external_config": "pylint: /home/diego/documentos/github/projetos/tool_for_writers_or_screenwriters/pyproject.toml",
+    "formatter": "json"
+  },
+  "messages": [
+    {
+      "source": "pylint",
+      "code": "unused-import",
+      "location": {
+        "path": "backend/models/scene.py",
+        "module": "backend.models.scene",
+        "function": null,
+        "line": 5,
+        "character": 0,
+        "lineEnd": 5,
+        "characterEnd": 66
+      },
+      "message": "Unused ForeignKey imported from sqlalchemy",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unused-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "unused-import",
+      "location": {
+        "path": "backend/models/scene.py",
+        "module": "backend.models.scene",
+        "function": null,
+        "line": 6,
+        "character": 0,
+        "lineEnd": 6,
+        "characterEnd": 47
+      },
+      "message": "Unused UUID imported from sqlalchemy.dialects.postgresql",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unused-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "unused-import",
+      "location": {
+        "path": "backend/models/annotation.py",
+        "module": "backend.models.annotation",
+        "function": null,
+        "line": 5,
+        "character": 0,
+        "lineEnd": 5,
+        "characterEnd": 57
+      },
+      "message": "Unused String imported from sqlalchemy",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unused-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "unused-import",
+      "location": {
+        "path": "backend/models/annotation.py",
+        "module": "backend.models.annotation",
+        "function": null,
+        "line": 6,
+        "character": 0,
+        "lineEnd": 6,
+        "characterEnd": 47
+      },
+      "message": "Unused UUID imported from sqlalchemy.dialects.postgresql",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unused-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "unused-import",
+      "location": {
+        "path": "backend/models/user.py",
+        "module": "backend.models.user",
+        "function": null,
+        "line": 6,
+        "character": 0,
+        "lineEnd": 6,
+        "characterEnd": 47
+      },
+      "message": "Unused UUID imported from sqlalchemy.dialects.postgresql",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unused-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "unused-import",
+      "location": {
+        "path": "backend/app/routes/auth.py",
+        "module": "auth",
+        "function": null,
+        "line": 5,
+        "character": 0,
+        "lineEnd": 5,
+        "characterEnd": 58
+      },
+      "message": "Unused current_app imported from flask",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unused-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "import-outside-toplevel",
+      "location": {
+        "path": "backend/app/routes/auth.py",
+        "module": "auth",
+        "function": "register",
+        "line": 30,
+        "character": 4,
+        "lineEnd": 30,
+        "characterEnd": 66
+      },
+      "message": "Import outside toplevel (backend.app.schemas.register_schema.RegisterSchema)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/convention/import-outside-toplevel.html"
+    },
+    {
+      "source": "pylint",
+      "code": "import-outside-toplevel",
+      "location": {
+        "path": "backend/app/routes/auth.py",
+        "module": "auth",
+        "function": "login",
+        "line": 69,
+        "character": 4,
+        "lineEnd": 69,
+        "characterEnd": 59
+      },
+      "message": "Import outside toplevel (backend.app.schemas.auth_schema.LoginSchema)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/convention/import-outside-toplevel.html"
+    },
+    {
+      "source": "pylint",
+      "code": "unused-variable",
+      "location": {
+        "path": "backend/app/routes/chapters.py",
+        "module": "chapters",
+        "function": "get_chapters",
+        "line": 22,
+        "character": 4,
+        "lineEnd": 22,
+        "characterEnd": 11
+      },
+      "message": "Unused variable 'user_id'",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unused-variable.html"
+    },
+    {
+      "source": "pylint",
+      "code": "import-outside-toplevel",
+      "location": {
+        "path": "backend/app/routes/chapters.py",
+        "module": "chapters",
+        "function": "create_chapter",
+        "line": 52,
+        "character": 4,
+        "lineEnd": 52,
+        "characterEnd": 70
+      },
+      "message": "Import outside toplevel (backend.app.schemas.chapter_schema.ChapterCreateSchema)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/convention/import-outside-toplevel.html"
+    },
+    {
+      "source": "pylint",
+      "code": "import-outside-toplevel",
+      "location": {
+        "path": "backend/app/routes/chapters.py",
+        "module": "chapters",
+        "function": "update_chapter",
+        "line": 91,
+        "character": 4,
+        "lineEnd": 91,
+        "characterEnd": 70
+      },
+      "message": "Import outside toplevel (backend.app.schemas.chapter_schema.ChapterUpdateSchema)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/convention/import-outside-toplevel.html"
+    },
+    {
+      "source": "pylint",
+      "code": "unused-import",
+      "location": {
+        "path": "backend/models/draft.py",
+        "module": "backend.models.draft",
+        "function": null,
+        "line": 5,
+        "character": 0,
+        "lineEnd": 5,
+        "characterEnd": 49
+      },
+      "message": "Unused ForeignKey imported from sqlalchemy",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unused-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "unused-import",
+      "location": {
+        "path": "backend/models/draft.py",
+        "module": "backend.models.draft",
+        "function": null,
+        "line": 6,
+        "character": 0,
+        "lineEnd": 6,
+        "characterEnd": 47
+      },
+      "message": "Unused UUID imported from sqlalchemy.dialects.postgresql",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unused-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "unused-import",
+      "location": {
+        "path": "backend/app/routes/projects.py",
+        "module": "projects",
+        "function": null,
+        "line": 9,
+        "character": 0,
+        "lineEnd": 9,
+        "characterEnd": 57
+      },
+      "message": "Unused AuthService imported from backend.app.services.auth_service",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unused-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "import-outside-toplevel",
+      "location": {
+        "path": "backend/app/routes/projects.py",
+        "module": "projects",
+        "function": "create_project",
+        "line": 48,
+        "character": 4,
+        "lineEnd": 48,
+        "characterEnd": 70
+      },
+      "message": "Import outside toplevel (backend.app.schemas.project_schema.ProjectCreateSchema)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/convention/import-outside-toplevel.html"
+    },
+    {
+      "source": "pylint",
+      "code": "import-outside-toplevel",
+      "location": {
+        "path": "backend/app/routes/projects.py",
+        "module": "projects",
+        "function": "update_project",
+        "line": 87,
+        "character": 4,
+        "lineEnd": 87,
+        "characterEnd": 70
+      },
+      "message": "Import outside toplevel (backend.app.schemas.project_schema.ProjectUpdateSchema)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/convention/import-outside-toplevel.html"
+    },
+    {
+      "source": "pylint",
+      "code": "unused-import",
+      "location": {
+        "path": "backend/models/autosave_version.py",
+        "module": "backend.models.autosave_version",
+        "function": null,
+        "line": 5,
+        "character": 0,
+        "lineEnd": 5,
+        "characterEnd": 49
+      },
+      "message": "Unused ForeignKey imported from sqlalchemy",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unused-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "unused-import",
+      "location": {
+        "path": "backend/models/autosave_version.py",
+        "module": "backend.models.autosave_version",
+        "function": null,
+        "line": 6,
+        "character": 0,
+        "lineEnd": 6,
+        "characterEnd": 47
+      },
+      "message": "Unused UUID imported from sqlalchemy.dialects.postgresql",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unused-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "unused-import",
+      "location": {
+        "path": "backend/app/routes/export.py",
+        "module": "export",
+        "function": null,
+        "line": 13,
+        "character": 0,
+        "lineEnd": 13,
+        "characterEnd": 36
+      },
+      "message": "Unused User imported from backend.models.user",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unused-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "unspecified-encoding",
+      "location": {
+        "path": "backend/app/routes/export.py",
+        "module": "export",
+        "function": "export_project",
+        "line": 34,
+        "character": 9,
+        "lineEnd": 34,
+        "characterEnd": 29
+      },
+      "message": "Using open without explicitly specifying an encoding",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unspecified-encoding.html"
+    },
+    {
+      "source": "pylint",
+      "code": "unused-import",
+      "location": {
+        "path": "backend/models/chapter.py",
+        "module": "backend.models.chapter",
+        "function": null,
+        "line": 5,
+        "character": 0,
+        "lineEnd": 5,
+        "characterEnd": 60
+      },
+      "message": "Unused ForeignKey imported from sqlalchemy",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unused-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "unused-import",
+      "location": {
+        "path": "backend/models/chapter.py",
+        "module": "backend.models.chapter",
+        "function": null,
+        "line": 6,
+        "character": 0,
+        "lineEnd": 6,
+        "characterEnd": 47
+      },
+      "message": "Unused UUID imported from sqlalchemy.dialects.postgresql",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unused-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "unused-import",
+      "location": {
+        "path": "backend/models/project.py",
+        "module": "backend.models.project",
+        "function": null,
+        "line": 5,
+        "character": 0,
+        "lineEnd": 5,
+        "characterEnd": 51
+      },
+      "message": "Unused ForeignKey imported from sqlalchemy",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unused-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "unused-import",
+      "location": {
+        "path": "backend/models/project.py",
+        "module": "backend.models.project",
+        "function": null,
+        "line": 6,
+        "character": 0,
+        "lineEnd": 6,
+        "characterEnd": 47
+      },
+      "message": "Unused UUID imported from sqlalchemy.dialects.postgresql",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unused-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "import-outside-toplevel",
+      "location": {
+        "path": "backend/app/__init__.py",
+        "module": "backend.app",
+        "function": "create_app",
+        "line": 30,
+        "character": 4,
+        "lineEnd": 39,
+        "characterEnd": 5
+      },
+      "message": "Import outside toplevel (backend.models.User, backend.models.Project, backend.models.Chapter, backend.models.Scene, backend.models.Draft, backend.models.Annotation, backend.models.AutosaveVersion, backend.models.Export)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/convention/import-outside-toplevel.html"
+    },
+    {
+      "source": "pylint",
+      "code": "unused-import",
+      "location": {
+        "path": "backend/app/__init__.py",
+        "module": "backend.app",
+        "function": "create_app",
+        "line": 30,
+        "character": 4,
+        "lineEnd": 39,
+        "characterEnd": 5
+      },
+      "message": "Unused User imported from backend.models",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unused-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "too-many-locals",
+      "location": {
+        "path": "backend/app/__init__.py",
+        "module": "backend.app",
+        "function": "create_app",
+        "line": 17,
+        "character": 0,
+        "lineEnd": 17,
+        "characterEnd": 14
+      },
+      "message": "Too many local variables (19/15)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/refactor/too-many-locals.html"
+    },
+    {
+      "source": "pylint",
+      "code": "import-outside-toplevel",
+      "location": {
+        "path": "backend/app/__init__.py",
+        "module": "backend.app",
+        "function": "create_app",
+        "line": 42,
+        "character": 4,
+        "lineEnd": 42,
+        "characterEnd": 53
+      },
+      "message": "Import outside toplevel (backend.app.routes.auth.bp)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/convention/import-outside-toplevel.html"
+    },
+    {
+      "source": "pylint",
+      "code": "import-outside-toplevel",
+      "location": {
+        "path": "backend/app/__init__.py",
+        "module": "backend.app",
+        "function": "create_app",
+        "line": 43,
+        "character": 4,
+        "lineEnd": 43,
+        "characterEnd": 61
+      },
+      "message": "Import outside toplevel (backend.app.routes.projects.bp)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/convention/import-outside-toplevel.html"
+    },
+    {
+      "source": "pylint",
+      "code": "import-outside-toplevel",
+      "location": {
+        "path": "backend/app/__init__.py",
+        "module": "backend.app",
+        "function": "create_app",
+        "line": 44,
+        "character": 4,
+        "lineEnd": 44,
+        "characterEnd": 61
+      },
+      "message": "Import outside toplevel (backend.app.routes.chapters.bp)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/convention/import-outside-toplevel.html"
+    },
+    {
+      "source": "pylint",
+      "code": "import-outside-toplevel",
+      "location": {
+        "path": "backend/app/__init__.py",
+        "module": "backend.app",
+        "function": "create_app",
+        "line": 45,
+        "character": 4,
+        "lineEnd": 45,
+        "characterEnd": 57
+      },
+      "message": "Import outside toplevel (backend.app.routes.scenes.bp)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/convention/import-outside-toplevel.html"
+    },
+    {
+      "source": "pylint",
+      "code": "import-outside-toplevel",
+      "location": {
+        "path": "backend/app/__init__.py",
+        "module": "backend.app",
+        "function": "create_app",
+        "line": 46,
+        "character": 4,
+        "lineEnd": 46,
+        "characterEnd": 57
+      },
+      "message": "Import outside toplevel (backend.app.routes.drafts.bp)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/convention/import-outside-toplevel.html"
+    },
+    {
+      "source": "pylint",
+      "code": "import-outside-toplevel",
+      "location": {
+        "path": "backend/app/__init__.py",
+        "module": "backend.app",
+        "function": "create_app",
+        "line": 47,
+        "character": 4,
+        "lineEnd": 47,
+        "characterEnd": 67
+      },
+      "message": "Import outside toplevel (backend.app.routes.annotations.bp)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/convention/import-outside-toplevel.html"
+    },
+    {
+      "source": "pylint",
+      "code": "import-outside-toplevel",
+      "location": {
+        "path": "backend/app/__init__.py",
+        "module": "backend.app",
+        "function": "create_app",
+        "line": 48,
+        "character": 4,
+        "lineEnd": 48,
+        "characterEnd": 61
+      },
+      "message": "Import outside toplevel (backend.app.routes.timeline.bp)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/convention/import-outside-toplevel.html"
+    },
+    {
+      "source": "pylint",
+      "code": "import-outside-toplevel",
+      "location": {
+        "path": "backend/app/__init__.py",
+        "module": "backend.app",
+        "function": "create_app",
+        "line": 49,
+        "character": 4,
+        "lineEnd": 49,
+        "characterEnd": 61
+      },
+      "message": "Import outside toplevel (backend.app.routes.autosave.bp)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/convention/import-outside-toplevel.html"
+    },
+    {
+      "source": "pylint",
+      "code": "import-outside-toplevel",
+      "location": {
+        "path": "backend/app/__init__.py",
+        "module": "backend.app",
+        "function": "create_app",
+        "line": 50,
+        "character": 4,
+        "lineEnd": 50,
+        "characterEnd": 57
+      },
+      "message": "Import outside toplevel (backend.app.routes.export.bp)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/convention/import-outside-toplevel.html"
+    },
+    {
+      "source": "pylint",
+      "code": "unused-import",
+      "location": {
+        "path": "backend/models/export.py",
+        "module": "backend.models.export",
+        "function": null,
+        "line": 6,
+        "character": 0,
+        "lineEnd": 6,
+        "characterEnd": 47
+      },
+      "message": "Unused UUID imported from sqlalchemy.dialects.postgresql",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/warning/unused-import.html"
+    },
+    {
+      "source": "pyflakes",
+      "code": "F401",
+      "location": {
+        "path": "backend/models/__init__.py",
+        "module": null,
+        "function": null,
+        "line": 6,
+        "character": 1
+      },
+      "message": "'.user.User' imported but unused",
+      "isFixable": false
+    },
+    {
+      "source": "pyflakes",
+      "code": "F401",
+      "location": {
+        "path": "backend/models/__init__.py",
+        "module": null,
+        "function": null,
+        "line": 7,
+        "character": 1
+      },
+      "message": "'.project.Project' imported but unused",
+      "isFixable": false
+    },
+    {
+      "source": "pyflakes",
+      "code": "F401",
+      "location": {
+        "path": "backend/models/__init__.py",
+        "module": null,
+        "function": null,
+        "line": 8,
+        "character": 1
+      },
+      "message": "'.chapter.Chapter' imported but unused",
+      "isFixable": false
+    },
+    {
+      "source": "pyflakes",
+      "code": "F401",
+      "location": {
+        "path": "backend/models/__init__.py",
+        "module": null,
+        "function": null,
+        "line": 9,
+        "character": 1
+      },
+      "message": "'.scene.Scene' imported but unused",
+      "isFixable": false
+    },
+    {
+      "source": "pyflakes",
+      "code": "F401",
+      "location": {
+        "path": "backend/models/__init__.py",
+        "module": null,
+        "function": null,
+        "line": 10,
+        "character": 1
+      },
+      "message": "'.draft.Draft' imported but unused",
+      "isFixable": false
+    },
+    {
+      "source": "pyflakes",
+      "code": "F401",
+      "location": {
+        "path": "backend/models/__init__.py",
+        "module": null,
+        "function": null,
+        "line": 11,
+        "character": 1
+      },
+      "message": "'.annotation.Annotation' imported but unused",
+      "isFixable": false
+    },
+    {
+      "source": "pyflakes",
+      "code": "F401",
+      "location": {
+        "path": "backend/models/__init__.py",
+        "module": null,
+        "function": null,
+        "line": 12,
+        "character": 1
+      },
+      "message": "'.autosave_version.AutosaveVersion' imported but unused",
+      "isFixable": false
+    },
+    {
+      "source": "pyflakes",
+      "code": "F401",
+      "location": {
+        "path": "backend/models/__init__.py",
+        "module": null,
+        "function": null,
+        "line": 13,
+        "character": 1
+      },
+      "message": "'.export.Export' imported but unused",
+      "isFixable": false
+    },
+    {
+      "source": "pylint",
+      "code": "cyclic-import",
+      "location": {
+        "path": "backend/app/utils/jwt_required.py",
+        "module": "jwt_required",
+        "function": null,
+        "line": 1,
+        "character": 0
+      },
+      "message": "Cyclic import (backend.app -> backend.models -> backend.models.autosave_version)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/refactor/cyclic-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "cyclic-import",
+      "location": {
+        "path": "backend/app/utils/jwt_required.py",
+        "module": "jwt_required",
+        "function": null,
+        "line": 1,
+        "character": 0
+      },
+      "message": "Cyclic import (backend.app -> backend.models -> backend.models.project)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/refactor/cyclic-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "cyclic-import",
+      "location": {
+        "path": "backend/app/utils/jwt_required.py",
+        "module": "jwt_required",
+        "function": null,
+        "line": 1,
+        "character": 0
+      },
+      "message": "Cyclic import (backend.app -> backend.models -> backend.models.annotation)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/refactor/cyclic-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "cyclic-import",
+      "location": {
+        "path": "backend/app/utils/jwt_required.py",
+        "module": "jwt_required",
+        "function": null,
+        "line": 1,
+        "character": 0
+      },
+      "message": "Cyclic import (backend.app -> backend.models -> backend.models.export)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/refactor/cyclic-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "cyclic-import",
+      "location": {
+        "path": "backend/app/utils/jwt_required.py",
+        "module": "jwt_required",
+        "function": null,
+        "line": 1,
+        "character": 0
+      },
+      "message": "Cyclic import (backend.app -> backend.models -> backend.models.chapter)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/refactor/cyclic-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "cyclic-import",
+      "location": {
+        "path": "backend/app/utils/jwt_required.py",
+        "module": "jwt_required",
+        "function": null,
+        "line": 1,
+        "character": 0
+      },
+      "message": "Cyclic import (backend.app -> backend.models -> backend.models.draft)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/refactor/cyclic-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "cyclic-import",
+      "location": {
+        "path": "backend/app/utils/jwt_required.py",
+        "module": "jwt_required",
+        "function": null,
+        "line": 1,
+        "character": 0
+      },
+      "message": "Cyclic import (backend.app -> backend.models -> backend.models.user)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/refactor/cyclic-import.html"
+    },
+    {
+      "source": "pylint",
+      "code": "cyclic-import",
+      "location": {
+        "path": "backend/app/utils/jwt_required.py",
+        "module": "jwt_required",
+        "function": null,
+        "line": 1,
+        "character": 0
+      },
+      "message": "Cyclic import (backend.app -> backend.models -> backend.models.scene)",
+      "isFixable": false,
+      "docUrl": "https://pylint.readthedocs.io/en/latest/user_guide/messages/refactor/cyclic-import.html"
+    }
+  ]
+}

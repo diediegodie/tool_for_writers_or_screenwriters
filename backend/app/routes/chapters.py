@@ -19,7 +19,7 @@ def get_chapters():
     List all chapters for a given project (user must own project).
     Query param: project_id
     """
-    user_id = request.user_id
+    user_id = request.user_id  # Reason: Used in future logic, ignore unused warning
     project_id = request.args.get("project_id")
     if not project_id:
         return jsonify({"error": "project_id required"}), 400

@@ -2,8 +2,7 @@
 Chapter model for top-level structure in a project.
 """
 
-from sqlalchemy import String, Integer, DateTime, ForeignKey
-from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy import String, Integer, DateTime
 import uuid
 from datetime import datetime
 from backend.app import db

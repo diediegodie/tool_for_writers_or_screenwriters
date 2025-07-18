@@ -3,7 +3,6 @@ User model for authentication info.
 """
 
 from sqlalchemy import String, DateTime
-from sqlalchemy.dialects.postgresql import UUID
 import uuid
 from datetime import datetime
 from backend.app import db

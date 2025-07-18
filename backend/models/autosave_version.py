@@ -2,8 +2,7 @@
 AutosaveVersion model for time-based snapshots of scene or draft content.
 """
 
-from sqlalchemy import DateTime, ForeignKey, Text
-from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy import DateTime, Text
 import uuid
 from datetime import datetime
 from backend.app import db

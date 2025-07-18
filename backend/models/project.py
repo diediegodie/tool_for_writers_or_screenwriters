@@ -2,8 +2,7 @@
 Project model for books/scripts created by a user.
 """
 
-from sqlalchemy import String, DateTime, ForeignKey
-from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy import String, DateTime
 import uuid
 from datetime import datetime
 from backend.app import db

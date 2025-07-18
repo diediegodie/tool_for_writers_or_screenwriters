@@ -2,8 +2,7 @@
 Scene model for scenes grouped within chapters.
 """
 
-from sqlalchemy import String, Integer, DateTime, ForeignKey, Text
-from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy import String, Integer, DateTime, Text
 import uuid
 from datetime import datetime
 from backend.app import db

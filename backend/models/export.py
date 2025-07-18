@@ -3,7 +3,6 @@ Export model for history of user exports.
 """
 
 from sqlalchemy import DateTime, String
-from sqlalchemy.dialects.postgresql import UUID
 from datetime import datetime
 import uuid
 from backend.app import db

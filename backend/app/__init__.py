@@ -27,16 +27,8 @@ def create_app(config_override=None):
     migrate.init_app(app, db)
     CORS(app)
     # Reason: Import models to register with SQLAlchemy
-    from backend.models import (
-        User,
-        Project,
-        Chapter,
-        Scene,
-        Draft,
-        Annotation,
-        AutosaveVersion,
-        Export,
-    )
+    # Reason: Import models to register with SQLAlchemy
+    import backend.models  # Reason: Only import for registration, not direct usage
 
     # Register blueprints
     from backend.app.routes.auth import bp as auth_bp

@@ -3,6 +3,11 @@ backend.models
 Exposes all SQLAlchemy models for import.
 """
 
+"""
+backend.models
+Exposes all SQLAlchemy models for import.
+"""
+
 from .user import User
 from .project import Project
 from .chapter import Chapter

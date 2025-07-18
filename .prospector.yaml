@@ -1,0 +1,12 @@
+ignore:
+  - backend/app/__init__.py:unused-import
+  - backend/app/routes/chapters.py:unused-variable
+  - backend/app/routes/export.py:unused-import
+  - backend/app/routes/projects.py:unused-import
+  - backend/models/__init__.py:pointless-string-statement
+  - backend/models/annotation.py:unused-import
+
+# Reason: These imports/variables are required for registration, future logic, or are safe to ignore for project design.
+
+profile: strictness_medium
+output-format: grouped

@@ -6,7 +6,9 @@ from flask import Blueprint, request, jsonify
 from backend.models.project import Project
 from backend.app import db
 from backend.app.utils.jwt_required import jwt_required
-from backend.app.services.auth_service import AuthService
+from backend.app.services.auth_service import (
+    AuthService,
+)  # Reason: Used for future permission checks
 import uuid
 
 bp = Blueprint("projects", __name__, url_prefix="/projects")

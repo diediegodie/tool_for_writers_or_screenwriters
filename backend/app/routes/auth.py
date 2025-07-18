@@ -2,7 +2,7 @@
 Auth routes for user registration and login.
 """
 
-from flask import Blueprint, request, jsonify, current_app
+from flask import Blueprint, request, jsonify
 from backend.models.user import User
 from backend.app import db
 from backend.app.services.auth_service import AuthService

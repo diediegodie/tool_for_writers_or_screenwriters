@@ -2,8 +2,7 @@
 Annotation model for highlights with context in a draft.
 """
 
-from sqlalchemy import String, DateTime, ForeignKey, Text
-from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy import String, DateTime, Text
 import uuid
 from datetime import datetime
 from backend.app import db

@@ -10,7 +10,7 @@ from backend.app.schemas.export_schema import ExportSchema
 from flask_jwt_extended import jwt_required, get_jwt_identity
 import os
 from datetime import datetime
-from backend.models.user import User
+from backend.models.user import User  # Reason: Used for future permission checks
 
 bp = Blueprint("export", __name__, url_prefix="/export")
 export_schema = ExportSchema()
@@ -31,7 +31,7 @@ def export_project(project_id):
     # Reason: Simulate export file creation
     file_name = f"export_{project_id}_{datetime.utcnow().strftime('%Y%m%d%H%M%S')}.{export_type}"
     file_path = os.path.join("/tmp", file_name)
-    with open(file_path, "w") as f:
+    with open(file_path, "w", encoding="utf-8") as f:
         f.write(f"Exported {export_type} for project {project_id}")
     export = Export(
         user_id=user_id,

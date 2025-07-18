@@ -2,43 +2,21 @@
 
 A productivity and structure management tool for writers and screenwriters. Organize your work into projects, chapters, and scenes. Write, annotate, save automatically, and export with ease.
 
-## Tech Stack
-
-**Frontend**
-- React (Vite)
 - Slate.js or Quill.js
 - TailwindCSS
-- Axios
-
-**Backend**
-- Flask (Python)
 - PostgreSQL + SQLAlchemy
 - JWT Authentication
-- DOCX + PDF export
-
 **Infrastructure**
-- Docker + Docker Compose
 - GitHub Actions (CI/CD)
 
 ---
-
-
 # Backend testing uses pytest and pytest-flask. All models, routes, and export logic are covered by unit and integration tests. Tests run in an isolated SQLite database and can be executed from the project root with `pytest`. All tests passing as of July 18, 2025.
-
----
-
-## Drafts API
 
 ### GET /drafts/
 - Returns a list of all drafts.
 - Requires JWT authentication.
-
-### POST /drafts/
 - Creates a new draft.
 - Requires JSON body: `{ "scene_id": "<uuid>", "content": "<text>" }`
-- Requires JWT authentication.
-
-## Annotations API
 
 ### GET /annotations/
 - Returns a list of all annotations.
@@ -88,3 +66,13 @@ A productivity and structure management tool for writers and screenwriters. Orga
 - `GET /timeline/<project_id>`  # ✅ Completed July 18, 2025
 - `POST /autosave`  # ✅ Completed July 18, 2025
 - `POST /export/<project_id>`  # ✅ Completed July 18, 2025
+
+---
+
+## Frontend Setup Progress
+
+- **Phase 3.1 – Initial Setup:**
+  - React + Vite project scaffolded
+  - Dependencies installed: slate, slate-react, axios, react-router-dom, react-query, react-beautiful-dnd
+  - Folder structure created as per TASK.md
+  - Ready for Login/Register implementation

@@ -1,0 +1,26 @@
+{
+  "name": "tool-for-writers-or-screenwriters",
+  "version": "1.0.0",
+  "description": "A complete writing tool designed for authors and screenwriters",
+  "private": true,
+  "scripts": {
+    "test:all": "./run_all_tests.sh",
+    "test:backend": "pytest",
+    "test:frontend": "cd frontend && npx vitest run",
+    "dev:backend": "cd backend && python run.py",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "lint:backend": "cd backend && prospector",
+    "lint:frontend": "cd frontend && npm run lint"
+  },
+  "keywords": [
+    "writing",
+    "screenwriting",
+    "text-editor",
+    "flask",
+    "react",
+    "fullstack"
+  ],
+  "author": "Diego",
+  "license": "MIT"
+}

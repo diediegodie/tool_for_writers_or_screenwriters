@@ -2,25 +2,23 @@
 Scene model for scenes grouped within chapters.
 """
 
-from sqlalchemy import Column, String, Integer, DateTime, ForeignKey, Text
+from sqlalchemy import String, Integer, DateTime, ForeignKey, Text
 from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy.ext.declarative import declarative_base
 import uuid
 from datetime import datetime
+from backend.app import db
 
-Base = declarative_base()
 
-
-class Scene(Base):
+class Scene(db.Model):
     """
     Scene model for scenes grouped within chapters.
     """
 
     __tablename__ = "scenes"
-    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    chapter_id = Column(UUID(as_uuid=True), ForeignKey("chapters.id"), nullable=False)
-    title = Column(String(200), nullable=False)
-    content = Column(Text)
-    order = Column(Integer, nullable=False)
-    created_at = Column(DateTime, default=datetime.utcnow)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    id = db.Column(db.String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    chapter_id = db.Column(db.String(36), db.ForeignKey("chapters.id"), nullable=False)
+    title = db.Column(String(200), nullable=False)
+    content = db.Column(Text)
+    order = db.Column(Integer, nullable=False)
+    created_at = db.Column(DateTime, default=datetime.utcnow)
+    updated_at = db.Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)

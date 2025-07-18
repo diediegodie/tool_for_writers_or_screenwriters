@@ -1,0 +1,13 @@
+[project]
+name = "tool-for-writers"
+version = "0.1.0"
+description = "A backend tool for writers and screenwriters"
+authors = [{name = "Diego"}]
+dependencies = []
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["backend", "backend.app"]

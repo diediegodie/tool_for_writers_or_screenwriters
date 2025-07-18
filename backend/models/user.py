@@ -2,23 +2,21 @@
 User model for authentication info.
 """
 
-from sqlalchemy import Column, String, DateTime
+from sqlalchemy import String, DateTime
 from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy.ext.declarative import declarative_base
 import uuid
 from datetime import datetime
+from backend.app import db
 
-Base = declarative_base()
 
-
-class User(Base):
+class User(db.Model):
     """
     User model for authentication info (JWT-based, hashed passwords).
     """
 
     __tablename__ = "users"
-    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    email = Column(String(120), unique=True, nullable=False)
-    password_hash = Column(String(128), nullable=False)
-    created_at = Column(DateTime, default=datetime.utcnow)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    id = db.Column(db.String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    email = db.Column(String(120), unique=True, nullable=False)
+    password_hash = db.Column(String(128), nullable=False)
+    created_at = db.Column(DateTime, default=datetime.utcnow)
+    updated_at = db.Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)

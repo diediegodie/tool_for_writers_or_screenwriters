@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   # PostgreSQL Database
   db:
@@ -39,7 +37,6 @@ services:
         condition: service_healthy
     volumes:
       - .:/app
-      - /app/__pycache__
     command: >
       sh -c "
         echo 'Waiting for database...' &&

@@ -3,17 +3,19 @@ Export routes for generating DOCX and PDF documents.
 """
 
 from flask import Blueprint, request, jsonify
+from flask_jwt_extended import jwt_required
 from app.models.project import Project
-from app.routes.projects import get_current_user_from_token
+from app.routes.projects import get_current_user
 
 exports_bp = Blueprint("exports", __name__)
 
 
 @exports_bp.route("/<project_id>", methods=["POST"])
+@jwt_required()
 def export_project(project_id):
     """Export a project to DOCX or PDF format."""
     try:
-        user = get_current_user_from_token()
+        user = get_current_user()
         if not user:
             return jsonify({"error": "Authentication required"}), 401
 

@@ -13,6 +13,7 @@ psycopg2-binary==2.9.7
 
 # Authentication
 PyJWT==2.8.0
+Flask-JWT-Extended==4.5.3
 
 # Validation
 pydantic==2.4.2

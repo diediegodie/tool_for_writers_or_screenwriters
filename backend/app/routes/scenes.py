@@ -3,20 +3,22 @@ Scene routes for CRUD operations on scenes.
 """
 
 from flask import Blueprint, request, jsonify
+from flask_jwt_extended import jwt_required
 from app import db
 from app.models.scene import Scene
 from app.models.chapter import Chapter
 from app.models.project import Project
-from app.routes.projects import get_current_user_from_token
+from app.routes.projects import get_current_user
 
 scenes_bp = Blueprint("scenes", __name__)
 
 
 @scenes_bp.route("/", methods=["POST"])
+@jwt_required()
 def create_scene():
     """Create a new scene."""
     try:
-        user = get_current_user_from_token()
+        user = get_current_user()
         if not user:
             return jsonify({"error": "Authentication required"}), 401
 
@@ -72,10 +74,11 @@ def create_scene():
 
 
 @scenes_bp.route("/<scene_id>", methods=["GET"])
+@jwt_required()
 def get_scene(scene_id):
     """Get a specific scene."""
     try:
-        user = get_current_user_from_token()
+        user = get_current_user()
         if not user:
             return jsonify({"error": "Authentication required"}), 401
 
@@ -96,10 +99,11 @@ def get_scene(scene_id):
 
 
 @scenes_bp.route("/<scene_id>", methods=["PUT"])
+@jwt_required()
 def update_scene(scene_id):
     """Update an existing scene."""
     try:
-        user = get_current_user_from_token()
+        user = get_current_user()
         if not user:
             return jsonify({"error": "Authentication required"}), 401
 
@@ -153,10 +157,11 @@ def update_scene(scene_id):
 
 
 @scenes_bp.route("/<scene_id>", methods=["DELETE"])
+@jwt_required()
 def delete_scene(scene_id):
     """Delete a scene."""
     try:
-        user = get_current_user_from_token()
+        user = get_current_user()
         if not user:
             return jsonify({"error": "Authentication required"}), 401
 
@@ -179,10 +184,11 @@ def delete_scene(scene_id):
 
 
 @scenes_bp.route("/<scene_id>/toggle-draft", methods=["POST"])
+@jwt_required()
 def toggle_draft_mode(scene_id):
     """Toggle draft mode for a scene."""
     try:
-        user = get_current_user_from_token()
+        user = get_current_user()
         if not user:
             return jsonify({"error": "Authentication required"}), 401
 

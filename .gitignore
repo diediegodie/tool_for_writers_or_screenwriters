@@ -8,6 +8,7 @@ TASK.md
 # Python Virtual Environments & Secrets
 ########################################
 venv/
+.envrc
 .env
 .env.*
 secrets.env

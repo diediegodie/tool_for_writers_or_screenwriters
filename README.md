@@ -22,7 +22,8 @@ A productivity and structure management tool for writers and screenwriters. Orga
 
 ---
 
-# Currently in development.
+
+# Backend testing uses pytest and pytest-flask. All models, routes, and export logic are covered by unit and integration tests. Tests run in an isolated SQLite database and can be executed from the project root with `pytest`. All tests passing as of July 18, 2025.
 
 ---
 

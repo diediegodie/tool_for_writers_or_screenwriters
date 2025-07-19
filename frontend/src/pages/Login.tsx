@@ -1,28 +1,32 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react'
+import axios from 'axios'
 
 /**
  * Login page for JWT authentication.
  * Handles user login and token storage.
  */
 const Login: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState<string | null>(null);
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError(null);
+    e.preventDefault()
+    setError(null)
     try {
-      const response = await axios.post('/auth/login', { email, password });
-      const { token } = response.data;
-      localStorage.setItem('token', token);
+      const response = await axios.post('/auth/login', { email, password })
+      const { token } = response.data
+      localStorage.setItem('token', token)
       // Reason: Token stored for authenticated requests
-      window.location.href = '/'; // Redirect to dashboard or home
-    } catch (err: any) {
-      setError(err.response?.data?.message || 'Login failed');
+      window.location.href = '/' // Redirect to dashboard or home
+    } catch (err) {
+      if (axios.isAxiosError(err)) {
+        setError(err.response?.data?.message || 'Login failed')
+      } else {
+        setError('Login failed')
+      }
     }
-  };
+  }
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
@@ -45,10 +49,15 @@ const Login: React.FC = () => {
           required
         />
         {error && <div className="text-red-500 mb-4">{error}</div>}
-        <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Login</button>
+        <button
+          type="submit"
+          className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+        >
+          Login
+        </button>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login

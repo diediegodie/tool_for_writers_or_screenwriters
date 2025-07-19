@@ -50,4 +50,25 @@ def create_app(config_override=None):
     app.register_blueprint(timeline_bp)
     app.register_blueprint(autosave_bp)
     app.register_blueprint(export_bp)
+
+    # Add a default root endpoint for API status
+    @app.route("/")
+    def index():
+        return {
+            "status": "ok",
+            "message": "Writer & Screenwriter Tool API is running.",
+            "endpoints": [
+                "/auth/login",
+                "/auth/register",
+                "/projects",
+                "/chapters",
+                "/scenes",
+                "/drafts",
+                "/annotations",
+                "/timeline/<project_id>",
+                "/autosave",
+                "/export/<project_id>",
+            ],
+        }, 200
+
     return app

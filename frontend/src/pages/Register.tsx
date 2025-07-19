@@ -1,28 +1,32 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react'
+import axios from 'axios'
 
 /**
  * Register page for new users.
  * Handles user registration and token storage.
  */
 const Register: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState<string | null>(null);
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError(null);
+    e.preventDefault()
+    setError(null)
     try {
-      const response = await axios.post('/auth/register', { email, password });
-      const { token } = response.data;
-      localStorage.setItem('token', token);
+      const response = await axios.post('/auth/register', { email, password })
+      const { token } = response.data
+      localStorage.setItem('token', token)
       // Reason: Token stored for authenticated requests
-      window.location.href = '/'; // Redirect to dashboard or home
-    } catch (err: any) {
-      setError(err.response?.data?.message || 'Registration failed');
+      window.location.href = '/' // Redirect to dashboard or home
+    } catch (err) {
+      if (axios.isAxiosError(err)) {
+        setError(err.response?.data?.message || 'Registration failed')
+      } else {
+        setError('Registration failed')
+      }
     }
-  };
+  }
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
@@ -45,10 +49,15 @@ const Register: React.FC = () => {
           required
         />
         {error && <div className="text-red-500 mb-4">{error}</div>}
-        <button type="submit" className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">Register</button>
+        <button
+          type="submit"
+          className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700"
+        >
+          Register
+        </button>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default Register;
+export default Register

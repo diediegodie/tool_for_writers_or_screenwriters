@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'axios'
 
 /**
  * Axios instance configured for JWT authentication.
@@ -7,17 +7,27 @@ import axios from 'axios';
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000',
   withCredentials: true,
-});
+})
+
+interface AuthHeaders {
+  Authorization?: string
+  [key: string]: string | undefined
+}
+
+interface RequestConfig {
+  headers?: AuthHeaders
+  [key: string]: unknown
+}
 
 api.interceptors.request.use(
-  (config: any) => {
-    const token = localStorage.getItem('token');
+  (config: RequestConfig) => {
+    const token = localStorage.getItem('token')
     if (token && config.headers) {
-      config.headers.Authorization = `Bearer ${token}`;
+      config.headers.Authorization = `Bearer ${token}`
     }
-    return config;
+    return config
   },
-  (error: any) => Promise.reject(error)
-);
+  (error: unknown) => Promise.reject(error)
+)
 
-export default api;
+export default api
